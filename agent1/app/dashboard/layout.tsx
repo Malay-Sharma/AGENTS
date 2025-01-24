@@ -1,6 +1,7 @@
 "use client"
 
 import Header from "@/components/Header"
+import { NavigationProvider } from "@/lib/NavigationProvider";
 import { Authenticated } from "convex/react";
 
 export default function DashboardPage({
@@ -9,17 +10,19 @@ export default function DashboardPage({
     children: React.ReactNode;
 }) {
     return (
-        <div className="flex h-screen">
-            <Authenticated>
-                <h1>Sidebar</h1>
-                {/* <Sidebar /> */}
-            </Authenticated>
+        <NavigationProvider>
+            <div className="flex h-screen">
+                <Authenticated>
+                    <h1>Sidebar</h1>
+                    {/* <Sidebar /> */}
+                </Authenticated>
 
-            <div className="flex-1 flex flex-col min-w-0">
-                <Header />
-                <main>{children}</main>
+                <div className="flex-1 flex flex-col min-w-0">
+                    <Header />
+                    <main>{children}</main>
+                </div>
             </div>
-        </div>
+        </NavigationProvider>
 
     )
 
