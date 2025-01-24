@@ -2,6 +2,7 @@
 
 import Header from "@/components/Header"
 import { NavigationProvider } from "@/lib/NavigationProvider";
+import Sidebar from "@/components/Sidebar";
 import { Authenticated } from "convex/react";
 
 export default function DashboardPage({
@@ -14,7 +15,7 @@ export default function DashboardPage({
             <div className="flex h-screen">
                 <Authenticated>
                     <h1>Sidebar</h1>
-                    {/* <Sidebar /> */}
+                    <Sidebar />
                 </Authenticated>
 
                 <div className="flex-1 flex flex-col min-w-0">
@@ -23,7 +24,5 @@ export default function DashboardPage({
                 </div>
             </div>
         </NavigationProvider>
-
     )
-
 }
