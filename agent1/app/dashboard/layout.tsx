@@ -14,7 +14,6 @@ export default function DashboardPage({
         <NavigationProvider>
             <div className="flex h-screen">
                 <Authenticated>
-                    <h1>Sidebar</h1>
                     <Sidebar />
                 </Authenticated>
 
