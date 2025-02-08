@@ -2,6 +2,8 @@
   "dependencies": {
     "@langchain/anthropic": "^0.3.13",
     "@langchain/core": "^0.3.38",
-    "@langchain/langgraph": "^0.2.44"
+    "@langchain/langgraph": "^0.2.44",
+    "@langchain/openai": "^0.4.2",
+    "@wxflows/sdk": "^2.0.0-beta.1"
   }
 }
